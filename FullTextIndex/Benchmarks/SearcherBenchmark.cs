@@ -9,6 +9,9 @@ public class SearcherBenchmark
 {
     private readonly string[] _dataset;
     private readonly SimpleFullTextIndex _index;
+
+    [Params("lot", "Russia", "the")]
+    public string Query;
     
     public SearcherBenchmark()
     {
@@ -22,12 +25,12 @@ public class SearcherBenchmark
     [Benchmark(Baseline = true)]
     public void SimpleSearch()
     { 
-        new SimpleSearcher().Search("Russia", _dataset).ToArray();  
+        new SimpleSearcher().Search(Query, _dataset).ToArray();  
     }
 
     [Benchmark]
     public void FullTextIndexedSearch()
     {
-        _index.SearchTest("Russia").ToArray();
+        _index.SearchTest(Query).ToArray();
     }
 }
