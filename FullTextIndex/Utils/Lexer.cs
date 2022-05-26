@@ -2,7 +2,7 @@ namespace FullTextIndex.Utils;
 
 public class Lexer
 {
-    public IEnumerable<string> GetTokens(string text)
+    public IEnumerable<(string Token, int Position)> GetTokens(string text)
     {
         var start = -1;
 
@@ -17,7 +17,7 @@ public class Lexer
             {
                 if (start >= 0)
                 {
-                    yield return GetToken(text, i, start);
+                    yield return (GetToken(text, i, start), i);
                     start = -1;
                 }
             }
