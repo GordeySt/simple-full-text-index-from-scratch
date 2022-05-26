@@ -2,6 +2,11 @@ using FullTextIndex.Utils;
 
 namespace FullTextIndex.Indexes;
 
+// JSON example of how this index will be represented
+// {
+//   "monday": [20, 345, 1564, 3456]
+// }
+// where we have documentIds in our array.
 public class SimpleFullTextIndex
 {
     private readonly Dictionary<string, HashSet<int>> _index = new();
