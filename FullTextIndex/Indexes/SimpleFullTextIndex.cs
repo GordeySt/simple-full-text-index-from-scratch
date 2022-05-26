@@ -29,8 +29,19 @@ public class SimpleFullTextIndex
         _content.Add(text);
     }
 
-    public IEnumerable<int> Search(string word) => 
-        _index.TryGetValue(word.ToLowerInvariant(), out var set) ? set : Enumerable.Empty<int>();
+    public ISet<int> Search(string word) =>
+        _index.TryGetValue(word.ToLowerInvariant(), out var set) ? set : new HashSet<int>();
+
+    public IEnumerable<int> Search(IEnumerable<string> words)
+    {
+        var sets = words.Select(Search).ToArray();
+        var result = sets[0].Intersect(sets[1]);
+
+        for (var i = 2; i < sets.Length; i++)
+            result = result.Intersect(sets[i]);
+
+        return result;
+    }
 
     public IEnumerable<string> SearchTest(string word)
     {
