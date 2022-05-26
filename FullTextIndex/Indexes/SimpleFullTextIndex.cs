@@ -18,7 +18,7 @@ public class SimpleFullTextIndex
     {
         var documentId = _content.Count;
         
-        foreach (var token in _lexer.GetTokens(text))
+        foreach (var (token, _) in _lexer.GetTokens(text))
         {
             if (_index.TryGetValue(token, out var set))
                 set.Add(documentId);

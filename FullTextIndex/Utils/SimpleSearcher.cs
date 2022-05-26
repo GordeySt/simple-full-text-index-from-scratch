@@ -29,7 +29,7 @@ public class SimpleSearcher
         }
     }
 
-    private string FormatMatchText(string text, int pos)
+    public string FormatMatchText(string text, int pos)
     {
         var start = Math.Max(0, pos - 50);
         var end = Math.Min(start + 100, text.Length - 1);
