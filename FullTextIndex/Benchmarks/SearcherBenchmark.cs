@@ -1,6 +1,7 @@
 using BenchmarkDotNet.Attributes;
+using FullTextIndex.Indexes;
 
-namespace FullTextIndex;
+namespace FullTextIndex.Benchmarks;
 
 [MemoryDiagnoser]
 [WarmupCount(1)]

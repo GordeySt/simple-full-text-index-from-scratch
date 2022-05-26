@@ -1,4 +1,6 @@
-namespace FullTextIndex;
+using FullTextIndex.Utils;
+
+namespace FullTextIndex.Indexes;
 
 public class SimpleFullTextIndex
 {

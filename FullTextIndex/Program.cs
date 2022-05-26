@@ -1,14 +1,12 @@
 ﻿using BenchmarkDotNet.Running;
-using FullTextIndex;
+using FullTextIndex.Benchmarks;
 
-/*
-var list = StringExtractor.ArticleSet().ToArray();
+/*var list = StringExtractor.ArticleSet().ToArray();
 
 var searcher = new SimpleSearcher();
-var list1 = searcher.Search("Russia", list);
+var list1 = searcher.Search("lot", list);
 
 foreach (var item in list1)
-    Console.WriteLine(item);
-    */
+    Console.WriteLine(item);*/
 
 BenchmarkRunner.Run<SearcherBenchmark>();

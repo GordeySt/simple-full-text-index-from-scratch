@@ -1,4 +1,4 @@
-namespace FullTextIndex;
+namespace FullTextIndex.Utils;
 
 public class Lexer
 {
