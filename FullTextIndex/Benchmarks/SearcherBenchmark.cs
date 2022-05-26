@@ -10,6 +10,7 @@ public class SearcherBenchmark
 {
     private readonly string[] _dataset;
     private readonly SimpleFullTextIndex _index;
+    private readonly FullTextIndexWithPositions _indexWithPositions;
 
     [Params("lot", "Russia", "the")]
     public string Query;
@@ -18,9 +19,13 @@ public class SearcherBenchmark
     {
         _dataset = StringExtractor.ArticleSet().ToArray();
         _index = new SimpleFullTextIndex();
+        _indexWithPositions = new FullTextIndexWithPositions();
 
         foreach (var item in _dataset)
+        {
             _index.AddStringToIndex(item);
+            _indexWithPositions.AddStringToIndex(item);
+        }
     }
 
     [Benchmark(Baseline = true)]
@@ -33,5 +38,11 @@ public class SearcherBenchmark
     public void FullTextIndexedSearch()
     {
         _index.SearchTest(Query).ToArray();
+    }
+    
+    [Benchmark]
+    public void FullTextIndexedWithPositionsSearch()
+    {
+        _indexWithPositions.SearchTest(Query).ToArray();
     }
 }
