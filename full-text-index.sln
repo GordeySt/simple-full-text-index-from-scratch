@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullTextIndex", "FullTextIndex\FullTextIndex.csproj", "{64FFCB6E-B2D9-44DA-8D50-9602851EFDF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrefixSuffixRadix", "PrefixSuffixRadix\PrefixSuffixRadix.csproj", "{99AB70AD-E211-4BAB-9F85-2095A8CD1B6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{64FFCB6E-B2D9-44DA-8D50-9602851EFDF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64FFCB6E-B2D9-44DA-8D50-9602851EFDF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64FFCB6E-B2D9-44DA-8D50-9602851EFDF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99AB70AD-E211-4BAB-9F85-2095A8CD1B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99AB70AD-E211-4BAB-9F85-2095A8CD1B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99AB70AD-E211-4BAB-9F85-2095A8CD1B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99AB70AD-E211-4BAB-9F85-2095A8CD1B6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
