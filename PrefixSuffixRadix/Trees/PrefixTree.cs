@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace PrefixSuffixRadix;
+namespace PrefixSuffixRadix.Trees;
 
 public class PrefixTree
 {

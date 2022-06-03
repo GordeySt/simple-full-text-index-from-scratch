@@ -10,7 +10,7 @@ public abstract class BaseBenchmark
     protected readonly SortedSearcher Sorted;
     protected readonly TreeSearcher Tree;
 
-    protected readonly string[] WordsToSearch = {
+    protected string[] WordsToSearch = {
         "adolescence",
         "sublimely",
         "mushy",
